@@ -1,0 +1,40 @@
+{
+    "home.title": "Squid game",
+    "error-with-status": "A {{statusCode}} error occurred on server",
+    "error-without-status": "An error occurred on the server",
+    "title": "Home | next-i18next",
+    "home.description_1" : "‘Squid Game Card’ is an NFT issuance project for infrastructure entities for metaverse using Ethereum blockchain.",
+    "home.description_2" : "The tokens issued by this project are an invitation for those who want to participate in building a decentralized metaverse.",
+    "home.description_3" : "It is a token that becomes a ‘seed’ for creating entities in the metaverse.",
+    "home.description_4" : "The ‘Squid Game Card’ project was launched to commemorate the 2021 ",
+    "home.description_link_1" : "Hangul Proclamation Day",
+    "home.description_5" : "(October 9).",
+
+    "home.subtitle_1": "Plan",
+    "home.subtitle_1_content_1": "-10,000 NFT cards issued in a total of 21 rounds",
+    "home.subtitle_1_content_2": "-Anyone can claim and issue 456 NFT cards issued on the Ethereum mainnet for each round",
+    "home.subtitle_1_content_3": "- A 12-hour round break begins at the end of each round",
+    "home.subtitle_1_content_4": "-After 20 rounds, an exclusive round is left for the development team.",
+
+    "home.subtitle_2": "Progress",
+
+    "home.subtitle_3": "NFT card properties",
+    "home.subtitle_3_content_1": "-Each NFT card will have 3 ‘",
+    "home.subtitle_3_content_link_1": "Hangul consonant'",
+    "home.subtitle_3_content_link_2": "https://en.wikipedia.org/wiki/Consonant",
+    "home.subtitle_3_content_2": "’ attributes and 8 number attributes",
+    "home.subtitle_3_content_3": "-Each attribute is randomly determined from the seed of N bytes at the time of claim",
+    "home.subtitle_3_content_4": "-The frequency of occurrence of combinations of Hangul consonants and numbers is unevenly distributed.",
+    "home.subtitle_3_content_5": "-The qualitative characteristics of the properties of the NFT card are determined by the dApp using the NFT",
+
+    "home.subtitle_4": "Minting method",
+    "home.subtitle_4_content_1": "-Click the ‘Contract’ menu to access Etherscan’s Web3 page",
+    "home.subtitle_4_content_2": "-Connect your cryptocurrency wallet to the Ethereum mainnet",
+    "home.subtitle_4_content_3": "-Enter a number between 1 and 456 in the ‘XXXX’ field and press the ‘mint’ button to",
+    "home.subtitle_4_content_4": "-If the result value of the ‘XXX’ item is ‘true’, the minting is successful. ",
+    "home.subtitle_4_content_5": "-Access the OpenSea site using the ‘Opensea’ menu and check the issued squid game NFT card by connecting a wallet",
+
+    "home.subtitle_5_content_1": "The smart contract of this project is open sourced in the ‘Github’ repository.",
+    "home.subtitle_5_content_2": "The code of this project consists of code that has not been ‘audited’ by a third party, ",
+    "home.subtitle_5_content_3": "third party, and the executor is responsible for its execution."
+}

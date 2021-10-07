@@ -1,0 +1,42 @@
+{
+    "home.title": "오징어 게임",
+    "error-with-status": "A {{statusCode}} error occurred on server",
+    "error-without-status": "An error occurred on the server",
+    "title": "Home | next-i18next",
+
+    "home.description_1" : "‘오징어게임’은 블록체인을 이용한 메타버스의 인프라 개체들을 위한 NFT 발행 프로젝트다." ,
+    "home.description_2" : "이 프로젝트에서 발행되는 토큰은 탈중앙화된 메타버스 구축에 참여하려는 사람들을 위한 초대장이자.",
+    "home.description_3" : "메타버스 내의 개체들을 생성하기 위한 ‘씨앗’이 되는 토큰이다.",
+    "home.description_4" : "‘오징어게임’ 프로젝트는 2021년 (10월 9일)을 기념하여 발행되었다.",
+    "home.description_link_1" : "한글날",
+    "home.description_5" : "(10월 9일)을 기념하여 발행되었다.",
+
+    "home.subtitle_1": "계획",
+    "home.subtitle_1_content_1": "-총 21개 라운드에 10,000개의 NFT 카드가 발행됨",
+    "home.subtitle_1_content_2": "-매 라운드별 이더리움 메인넷에서 발행된 456개의 NFT 카드를 누구나 클레임하여 발행할 수 있음",
+    "home.subtitle_1_content_3": "-각 라운드가 끝나면 12시간의 라운드 브레이크가 시작됨",
+    "home.subtitle_1_content_4": "-20개의 라운드가 종료되면 개발팀을 위한 배타적 라운드가 남겨짐",
+
+    "home.subtitle_2": "진행",
+
+    "home.subtitle_3": "NFT 카드의 속성",
+    "home.subtitle_3_content_1": "-각 NFT 카드는 3개의 ‘",
+    "home.subtitle_3_content_link_1": "한글 자음",
+    "home.subtitle_3_content_link_2": "https://ko.wikipedia.org/wiki/%EC%9E%90%EC%9D%8C",
+    "home.subtitle_3_content_2": "’ 속성과 8개의 숫자로 이루어진 속성을 갖게됨",
+    "home.subtitle_3_content_3": "-각 속성은 클레임 시에 N Byte의 seed로부터 랜덤하게 결정됨",
+    "home.subtitle_3_content_4": "-한글 자음의 조합과 숫자의 발생 빈도는 불균등하게 분포됨",
+    "home.subtitle_3_content_5": "-NFT 카드의 속성이 가진 질적 특성은 NFT를 사용하는 dApp에 의해 결정됨",
+
+    "home.subtitle_4": "Minting 방법",
+    "home.subtitle_4_content_1": "-‘Contract’ 메뉴를 클릭하여 이더스캔의 Web3 페이지에 접속",
+    "home.subtitle_4_content_2": "-암호화폐 지갑을 이더리움 메인넷에 연결",
+    "home.subtitle_4_content_3": "-‘XXXX’ 항목에 1~456 사이의 숫자를 입력하고 ‘mint’ 버튼을 눌러",
+    "home.subtitle_4_content_4": "-‘XXX’ 항목의 결과값이 ‘true’이면 발행 성공",
+    "home.subtitle_4_content_5": "-‘Opensea’ 메뉴를 이용하여 OpenSea 사이트에 접속하여 지갑을 연결하여 발행된 오징어게임 NFT 카드를 확인",
+
+    "home.subtitle_5_content_1": "이 프로젝트의 스마트컨트랙은 ‘깃허브’ 저장소에 오픈소스로 공개되어 있음",
+    "home.subtitle_5_content_2": "이 프로젝트의 코드는 제3자에 의한 ‘감사’를 수행하지 않은 코드로 구성되어 있으며, ",
+    "home.subtitle_5_content_3": "이의 실행에 대한 모든 책임은 실행자에게 있음"
+
+}

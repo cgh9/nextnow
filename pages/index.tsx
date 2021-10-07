@@ -4,98 +4,169 @@ import Layout from "@components/Layout"; // Layout wrapper
 import { defaultBags } from "@utils/constants"; // Bags to render
 import styles from "@styles/pages/Home.module.scss"; // Styles
 import { ReactSVG } from 'react-svg';
+import { useRouter } from 'next/router'
 
 // Types
 import type { ReactElement } from "react";
 
-export default function Home(): ReactElement {
-  // Quicklinks to render
-  const quicklinks: Record<string, string>[] = [
-    { name: "OpenSea", url: "https://opensea.io/collection/lootproject" },
-    {
-      name: "Twitter",
-      url: "https://twitter.com/lootproject",
-    },
-    {
-      name: "Contract",
-      url: "https://etherscan.io/address/0xff9c1b15b16263c61d017ee9f65c50e4ae0113d7",
-    },
-  ];
 
-  /**
-   * Selects 3 random bags from defaultBags
-   * @returns {Record<string, string>[]} randomized bags
-   */
-  const getRandomThreeBags = () => {
-    const shuffled = defaultBags.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, 3);
-  };
+//i18
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
-  return (
-    <Layout>
-      <div>
-        <div className={styles.home__cta}>
-          {/* CTA title */}
-          <h1>Squid game</h1>
+//img
+import Image from 'next/image';
+import imgA from '../public/bb.png';
+import img_progress from '../public/program_img.png'
 
-          {/* Quicklinks */}
-          <ul>
-            {quicklinks.map(({ name, url }, i) => {
-              return (
-                <li key={i}>
-                  {url.startsWith("/") ? (
-                    // If link to local page use Link
-                    <Link href={url}>
-                      <a>{name}</a>
-                    </Link>
-                  ) : (
-                    // Else, redirect in new tab
-                    <a href={url} target="_blank" rel="noopener noreferrer">
-                      {name}
-                    </a>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
+function Home(): ReactElement {
 
-          {/* CTA Description */}
-          <p>
-            Loot is randomized adventurer gear generated and stored on chain.
-            <br /> Stats, images, and other functionality are intentionally
-            omitted for others to interpret. <br /> Feel free to use Loot in any
-            way you want.
-          </p>
-        </div>
+    // Quicklinks to render
+    const quicklinks: Record<string, string>[] = [
+        { name: "OpenSea", url: "https://opensea.io/collection/lootproject" },
+        {
+            name: "Twitter",
+            url: "https://twitter.com/lootproject",
+        },
+        {
+            name: "Contract",
+            url: "https://etherscan.io/address/0xff9c1b15b16263c61d017ee9f65c50e4ae0113d7",
+        },
+    ];
 
-        {/* Rendering sample loot bags */}
-        <div className={styles.home__feature}>
-          <span>Example svgs:</span>
-          <ReactSVG
-            afterInjection={(error, svg) => {
-              if (error) {
-                console.error(error)
-                return
-              }
-              console.log(svg)
-            }}
-            beforeInjection={(svg) => {
-              svg.classList.add('svg-class-name')
-              svg.setAttribute('style', 'width: 200px; height: 200px;')
-            }}
-            // className={styles.home__svg}
-            evalScripts="always"
-            fallback={() => <span>Error!</span>}
-            loading={() => <span>Loading</span>}
-            onClick={() => {
-              console.log('wrapper onClick')
-            }}
-            renumerateIRIElements={false}
-            src="tribal-star-shaped-vector-art.svg"
-            useRequestCache={false}
-            wrapper="span"
-          />
-          {/* {getRandomThreeBags().map(({ id, attributes }, i) => (
+    /**
+     * Selects 3 random bags from defaultBags
+     * @returns {Record<string, string>[]} randomized bags
+     */
+    const getRandomThreeBags = () => {
+        const shuffled = defaultBags.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, 3);
+    };
+
+    const router = useRouter()
+    const { t } = useTranslation("common");
+
+    return (
+        <Layout>
+            <div>
+
+                <div className={styles.home__cta}>
+                    {/* CTA title */}
+
+                    <h1 >{t('home.title')}
+                        <Image src={imgA} alt="Picture of the author" />
+                    </h1>
+
+
+
+                    <ul>
+                        {quicklinks.map(({ name, url }, i) => {
+                            return (
+                                <li key={i}>
+                                    {url.startsWith("/") ? (
+                                        // If link to local page use Link
+                                        <Link href={url}>
+                                            <a>{name}</a>
+                                        </Link>
+                                    ) : (
+                                        // Else, redirect in new tab
+                                        <a href={url} target="_blank" rel="noopener noreferrer">
+                                            {name}
+                                        </a>
+                                    )}
+                                </li>
+                            );
+                        })}
+                    </ul>
+
+                    {/* CTA Description */}
+                    <p className={styles.home__p} >{t('home.description_1')}</p>
+                    <p className={styles.home__p2}>{t('home.description_2')}</p>
+                    <p className={styles.home__p}>{t('home.description_3')}</p>
+                    <p className={styles.home__p2}>{t('home.description_4')}<a href="https://en.wikipedia.org/wiki/Hangul_Day" target="_blank">{t('home.description_link_1')}</a>{t('home.description_5')}</p>
+                </div>
+
+                {/* Rendering sample loot bags */}
+                <div className={styles.home__feature}>
+                    <span>Latest Minted Card</span>
+                    <div>
+                        <ReactSVG
+                            afterInjection={(error, svg) => {
+                                if (error) {
+                                    console.error(error)
+                                    return
+                                }
+                                console.log(svg)
+                            }}
+                            beforeInjection={(svg) => {
+                                svg.classList.add('svg-class-name')
+                                svg.setAttribute('style', 'width: 200px; height: 200px;')
+                            }}
+                            // className={styles.home__svg}
+                            evalScripts="always"
+                            fallback={() => <span>Error!</span>}
+                            loading={() => <span>Loading</span>}
+                            onClick={() => {
+                                console.log('wrapper onClick')
+                            }}
+                            renumerateIRIElements={false}
+                            src="tribal-star-shaped-vector-art.svg"
+                            useRequestCache={false}
+                            wrapper="span"
+                        />
+
+                        <ReactSVG
+                            afterInjection={(error, svg) => {
+                                if (error) {
+                                    console.error(error)
+                                    return
+                                }
+                                console.log(svg)
+                            }}
+                            beforeInjection={(svg) => {
+                                svg.classList.add('svg-class-name')
+                                svg.setAttribute('style', 'width: 200px; height: 200px;')
+                            }}
+                            // className={styles.home__svg}
+                            evalScripts="always"
+                            fallback={() => <span>Error!</span>}
+                            loading={() => <span>Loading</span>}
+                            onClick={() => {
+                                console.log('wrapper onClick')
+                            }}
+                            renumerateIRIElements={false}
+                            src="q1.svg"
+                            useRequestCache={false}
+                            wrapper="span"
+                        />
+
+                        <ReactSVG
+                            afterInjection={(error, svg) => {
+                                if (error) {
+                                    console.error(error)
+                                    return
+                                }
+                                console.log(svg)
+                            }}
+                            beforeInjection={(svg) => {
+                                svg.classList.add('svg-class-name')
+                                svg.setAttribute('style', 'width: 200px; height: 200px;')
+                            }}
+                            // className={styles.home__svg}
+                            evalScripts="always"
+                            fallback={() => <span>Error!</span>}
+                            loading={() => <span>Loading</span>}
+                            onClick={() => {
+                                console.log('wrapper onClick')
+                            }}
+                            renumerateIRIElements={false}
+                            src="q2.svg"
+                            useRequestCache={false}
+                            wrapper="span"
+                        />
+
+                    </div>
+                    {/*{getRandomThreeBags().map(({ id, attributes }, i) => (
             // For each loot bag, render item and link to OpenSea
             <a
               href={`https://opensea.io/assets/0xff9c1b15b16263c61d017ee9f65c50e4ae0113d7/${id}`}
@@ -116,8 +187,76 @@ export default function Home(): ReactElement {
               </div>
             </a>
           ))} */}
-        </div>
-      </div>
-    </Layout>
-  );
+
+                    <div className={styles['home__feature-links']}>
+                        <Link href="/more">
+                            <a>more</a>
+                        </Link>
+                    </div>
+                </div>
+
+            </div>
+
+            {/* { } */}
+            <div className={styles.home__subtitle_1}>
+                <h2>{t('home.subtitle_1')}</h2>
+                <div>
+                    <p>{t('home.subtitle_1_content_1')}</p>
+                    <p>{t('home.subtitle_1_content_2')}</p>
+                    <p>{t('home.subtitle_1_content_3')}</p>
+                    <p>{t('home.subtitle_1_content_4')}</p>
+                </div>
+
+            </div>
+
+            <div className={styles.home__subtitle_2}>
+                <h2>{t('home.subtitle_2')}</h2>
+                <div>
+                    <Image src={img_progress} alt="Picture of the author" />
+                </div>
+
+            </div>
+
+            <div className={styles.home__subtitle_3}>
+                <h2>{t('home.subtitle_3')}</h2>
+                <div>
+                    <p>{t('home.subtitle_3_content_1')}<a href ={t('home.subtitle_3_content_link_2')}  target="_blank">{t('home.subtitle_3_content_link_1')}</a>{t('home.subtitle_3_content_2')}</p>
+                    <p>{t('home.subtitle_3_content_3')}</p>
+                    <p>{t('home.subtitle_3_content_4')}</p>
+                    <p>{t('home.subtitle_3_content_5')}</p>
+                </div>
+
+            </div>
+
+            <div className={styles.home__subtitle_4}>
+                <h2>{t('home.subtitle_4')}</h2>
+                <div>
+                    <p className={styles.home__subtitle_4_p}>{t('home.subtitle_4_content_1')}</p>
+                    <p className={styles.home__subtitle_4_p}>{t('home.subtitle_4_content_2')}</p>
+                    <p className={styles.home__subtitle_4_p}>{t('home.subtitle_4_content_3')}</p>
+                    <p className={styles.home__subtitle_4_p}>{t('home.subtitle_4_content_4')}</p>
+                    <p className={styles.home__subtitle_4_p2}>{t('home.subtitle_4_content_5')}</p>
+                </div>
+            </div>
+
+            <div className={styles.home__subtitle_5}>
+                <div>
+                    <p>{t('home.subtitle_5_content_1')}</p>
+                    <p>{t('home.subtitle_5_content_2')}</p>
+                    <p>{t('home.subtitle_5_content_3')}</p>
+                </div>
+
+            </div>
+        </Layout>
+
+
+    );//return end
 }
+
+export const getStaticProps = async ({ locale }) => ({
+    props: {
+        ...await serverSideTranslations(locale, ['common']),
+    },
+})
+
+export default Home
