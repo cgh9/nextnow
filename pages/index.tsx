@@ -5,9 +5,10 @@ import { defaultBags } from "@utils/constants"; // Bags to render
 import styles from "@styles/pages/Home.module.scss"; // Styles
 import { ReactSVG } from 'react-svg';
 import { useRouter } from 'next/router'
+import { GetStaticProps  } from 'next'
 
 // Types
-import type { ReactElement } from "react";
+import type { ReactElement , FC} from "react";
 
 
 //i18
@@ -45,7 +46,7 @@ function Home(): ReactElement {
 
     const router = useRouter()
     const { t } = useTranslation("common");
-
+    let locale;
     return (
         <Layout>
             <div>
@@ -253,10 +254,24 @@ function Home(): ReactElement {
     );//return end
 }
 
-export const getStaticProps = async ({ locale }) => ({
+interface Props{
+    
+}
+export const getStaticProps : GetStaticProps<Props> = async ({ locale }) => {
+    return{
     props: {
-        ...await serverSideTranslations(locale, ['common']),
+        // TODO: locale type missmath - locale argument can be undefined || string
+        // but serverSide string 타입을 받기원하는데 locale 은 undefined 일수도있기 때문에 타입 에러가 난다
+        ...await serverSideTranslations(locale as any, ['common']),
     },
-})
+}}
+// import React, { FC } from "react";
 
+// interface Props {
+//     // any props that come into the component
+// }
+
+// const Button1: FC<Props> = ({ children, ...props }) => (
+//     <Button {...props}>{children}</Button>
+// );
 export default Home
