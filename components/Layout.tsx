@@ -101,10 +101,10 @@ function Header() {
                 </Link>
             </div>
             <div>
-                    <Link href="/" locale="en">
+                    <Link href="#" locale="en">
                         <button>영어 English </button>
                     </Link>
-                    <Link href="/" locale="ko">
+                    <Link href="#" locale="ko">
                         <button>한국어 Korean</button>
                     </Link>
                 </div>

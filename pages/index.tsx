@@ -5,15 +5,17 @@ import { defaultBags } from "@utils/constants"; // Bags to render
 import styles from "@styles/pages/Home.module.scss"; // Styles
 import { ReactSVG } from 'react-svg';
 import { useRouter } from 'next/router'
-import { GetStaticProps  } from 'next'
+
 
 // Types
 import type { ReactElement , FC} from "react";
 
 
 //i18
+import { GetStaticProps  } from 'next'
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+
 
 //img
 import Image from 'next/image';
@@ -21,7 +23,7 @@ import imgA from '../public/bb.png';
 import img_progress from '../public/program_img.png'
 
 function Home(): ReactElement {
-
+    const { t } = useTranslation("common");
     // Quicklinks to render
     const quicklinks: Record<string, string>[] = [
         { name: "OpenSea", url: "https://opensea.io/collection/lootproject" },
@@ -45,20 +47,18 @@ function Home(): ReactElement {
     };
 
     const router = useRouter()
-    const { t } = useTranslation("common");
-    let locale;
+    
+
     return (
         <Layout>
             <div>
 
                 <div className={styles.home__cta}>
                     {/* CTA title */}
-
-                    <h1 >{t('home.title')}
+                    <div>
+                    <h1 >{t('home.title')}</h1>                    
                         <Image src={imgA} alt="Picture of the author" />
-                    </h1>
-
-
+                    </div>
 
                     <ul>
                         {quicklinks.map(({ name, url }, i) => {
@@ -84,7 +84,7 @@ function Home(): ReactElement {
                     <p className={styles.home__p} >{t('home.description_1')}</p>
                     <p className={styles.home__p2}>{t('home.description_2')}</p>
                     <p className={styles.home__p}>{t('home.description_3')}</p>
-                    <p className={styles.home__p2}>{t('home.description_4')}<a href="https://en.wikipedia.org/wiki/Hangul_Day" target="_blank">{t('home.description_link_1')}</a>{t('home.description_5')}</p>
+                    <p className={styles.home__p2}>{t('home.description_4_1')}<a href={t('home.description_4_2_link')} target="_blank">{t('home.description_4_2')}</a>{t('home.description_4_3')}</p>
                 </div>
 
                 {/* Rendering sample loot bags */}
@@ -112,7 +112,7 @@ function Home(): ReactElement {
                             }}
                             renumerateIRIElements={false}
                             src="tribal-star-shaped-vector-art.svg"
-                            useRequestCache={false}
+                            useRequestCache={true}
                             wrapper="span"
                         />
 
@@ -131,13 +131,13 @@ function Home(): ReactElement {
                             // className={styles.home__svg}
                             evalScripts="always"
                             fallback={() => <span>Error!</span>}
-                            loading={() => <span>Loading</span>}
+                            loading={() => <div style= {{width: "200px", height: "200px"}}></div>}
                             onClick={() => {
                                 console.log('wrapper onClick')
                             }}
                             renumerateIRIElements={false}
                             src="q1.svg"
-                            useRequestCache={false}
+                            useRequestCache={true}
                             wrapper="span"
                         />
 
@@ -162,7 +162,7 @@ function Home(): ReactElement {
                             }}
                             renumerateIRIElements={false}
                             src="q2.svg"
-                            useRequestCache={false}
+                            useRequestCache={true}
                             wrapper="span"
                         />
 
@@ -221,10 +221,10 @@ function Home(): ReactElement {
             <div className={styles.home__subtitle_3}>
                 <h2>{t('home.subtitle_3')}</h2>
                 <div>
-                    <p>{t('home.subtitle_3_content_1')}<a href ={t('home.subtitle_3_content_link_2')}  target="_blank">{t('home.subtitle_3_content_link_1')}</a>{t('home.subtitle_3_content_2')}</p>
+                    <p>{t('home.subtitle_3_content_1_1')}<a href ={t('home.subtitle_3_content_1_2_link')}  target="_blank">{t('home.subtitle_3_content_1_2')}</a>{t('home.subtitle_3_content_1_3')}</p>
+                    <p>{t('home.subtitle_3_content_2')}</p>
                     <p>{t('home.subtitle_3_content_3')}</p>
                     <p>{t('home.subtitle_3_content_4')}</p>
-                    <p>{t('home.subtitle_3_content_5')}</p>
                 </div>
 
             </div>
@@ -257,7 +257,7 @@ function Home(): ReactElement {
 interface Props{
     
 }
-export const getStaticProps : GetStaticProps<Props> = async ({ locale }) => {
+export const getStaticProps : GetStaticProps = async ({ locale }) => {
     return{
     props: {
         // TODO: locale type missmath - locale argument can be undefined || string

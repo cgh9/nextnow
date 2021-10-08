@@ -6,9 +6,10 @@
     "home.description_1" : "‘Squid Game Card’ is an NFT issuance project for infrastructure entities for metaverse using Ethereum blockchain.",
     "home.description_2" : "The tokens issued by this project are an invitation for those who want to participate in building a decentralized metaverse.",
     "home.description_3" : "It is a token that becomes a ‘seed’ for creating entities in the metaverse.",
-    "home.description_4" : "The ‘Squid Game Card’ project was launched to commemorate the 2021 ",
-    "home.description_link_1" : "Hangul Proclamation Day",
-    "home.description_5" : "(October 9).",
+    "home.description_4_1" : "The ‘Squid Game Card’ project was launched to commemorate the 2021 ",
+    "home.description_4_2" : "Hangul Proclamation Day",
+    "home.description_4_2_link" : "https://en.wikipedia.org/wiki/Hangul_Day",
+    "home.description_4_3" : "(October 9).",
 
     "home.subtitle_1": "Plan",
     "home.subtitle_1_content_1": "-10,000 NFT cards issued in a total of 21 rounds",
@@ -19,13 +20,13 @@
     "home.subtitle_2": "Progress",
 
     "home.subtitle_3": "NFT card properties",
-    "home.subtitle_3_content_1": "-Each NFT card will have 3 ‘",
-    "home.subtitle_3_content_link_1": "Hangul consonant'",
-    "home.subtitle_3_content_link_2": "https://en.wikipedia.org/wiki/Consonant",
-    "home.subtitle_3_content_2": "’ attributes and 8 number attributes",
-    "home.subtitle_3_content_3": "-Each attribute is randomly determined from the seed of N bytes at the time of claim",
-    "home.subtitle_3_content_4": "-The frequency of occurrence of combinations of Hangul consonants and numbers is unevenly distributed.",
-    "home.subtitle_3_content_5": "-The qualitative characteristics of the properties of the NFT card are determined by the dApp using the NFT",
+    "home.subtitle_3_content_1_1": "-Each NFT card will have 3 ‘",
+    "home.subtitle_3_content_1_2": "Hangul consonant",
+    "home.subtitle_3_content_1_2_link": "https://en.wikipedia.org/wiki/Consonant",
+    "home.subtitle_3_content_1_3": "’ attributes and 8 number attributes",
+    "home.subtitle_3_content_2": "-Each attribute is randomly determined from the seed of N bytes at the time of claim",
+    "home.subtitle_3_content_3": "-The frequency of occurrence of combinations of Hangul consonants and numbers is unevenly distributed.",
+    "home.subtitle_3_content_4": "-The qualitative characteristics of the properties of the NFT card are determined by the dApp using the NFT",
 
     "home.subtitle_4": "Minting method",
     "home.subtitle_4_content_1": "-Click the ‘Contract’ menu to access Etherscan’s Web3 page",
@@ -36,5 +37,19 @@
 
     "home.subtitle_5_content_1": "The smart contract of this project is open sourced in the ‘Github’ repository.",
     "home.subtitle_5_content_2": "The code of this project consists of code that has not been ‘audited’ by a third party, ",
-    "home.subtitle_5_content_3": "third party, and the executor is responsible for its execution."
+    "home.subtitle_5_content_3": "third party, and the executor is responsible for its execution.",
+
+    "faq.title" : "FAQ",
+
+    "faq.subtitle_1" : "‘오징어게임 카드’는 무엇인가요?",
+    "faq.subtitle_1_content_1" : "-‘오징어게임 카드’는 블록체인을 이용한 메타버스의 인프라 개체들을 위한 NFT  토큰입니다",
+    "faq.subtitle_1_content_2_1" : "- ‘오징어게임 카드’는 3개의",
+    "faq.subtitle_1_content_2_2" : "한글 자음",
+    "faq.subtitle_1_content_2_2_link" : "https://ko.wikipedia.org/wiki/%EC%9E%90%EC%9D%8C",
+    "faq.subtitle_1_content_2_3" : "으로 된 속성과 8개의 숫자로 된 속성을 가지고 있습니다" ,
+    "faq.subtitle_1_content_3" : "-여러분이 이 카드를 발행하여 수령하거나 구매하는 것은 여러분이 오징어게임 메타버스에 참여하는 것을 동의한다는 것을 의미합니다.",
+    "faq.subtitle_1_content_4" : "-Genesis Phase 동안 ‘오징어게임 카드’는 Gas fee만으로 누구나 발행하여 가질 수 있습니다",
+
+    "faq.subtitle_2" : "‘오징어게임 카드’의 특별한 점은 무엇인가요?",
+    "faq.subtitle_2_content_1" : ""
 }
