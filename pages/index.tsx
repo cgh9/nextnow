@@ -26,7 +26,7 @@ function Home(): ReactElement {
     const { t } = useTranslation("common");
     // Quicklinks to render
     const quicklinks: Record<string, string>[] = [
-        { name: "OpenSea", url: "https://opensea.io/collection/lootproject" },
+        { name: "OpenSea", url: "https://opensea.io/collection/play-squid-game" },
         {
             name: "Twitter",
             url: "https://twitter.com/lootproject",
@@ -246,7 +246,12 @@ function Home(): ReactElement {
                     <p>{t('home.subtitle_5_content_2')}</p>
                     <p>{t('home.subtitle_5_content_3')}</p>
                 </div>
-
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
             </div>
         </Layout>
 

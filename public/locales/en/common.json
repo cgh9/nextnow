@@ -41,15 +41,38 @@
 
     "faq.title" : "FAQ",
 
-    "faq.subtitle_1" : "‘오징어게임 카드’는 무엇인가요?",
-    "faq.subtitle_1_content_1" : "-‘오징어게임 카드’는 블록체인을 이용한 메타버스의 인프라 개체들을 위한 NFT  토큰입니다",
-    "faq.subtitle_1_content_2_1" : "- ‘오징어게임 카드’는 3개의",
-    "faq.subtitle_1_content_2_2" : "한글 자음",
-    "faq.subtitle_1_content_2_2_link" : "https://ko.wikipedia.org/wiki/%EC%9E%90%EC%9D%8C",
-    "faq.subtitle_1_content_2_3" : "으로 된 속성과 8개의 숫자로 된 속성을 가지고 있습니다" ,
-    "faq.subtitle_1_content_3" : "-여러분이 이 카드를 발행하여 수령하거나 구매하는 것은 여러분이 오징어게임 메타버스에 참여하는 것을 동의한다는 것을 의미합니다.",
-    "faq.subtitle_1_content_4" : "-Genesis Phase 동안 ‘오징어게임 카드’는 Gas fee만으로 누구나 발행하여 가질 수 있습니다",
+    "faq.subtitle_1" : "What is a ‘squid game card’?",
+    "faq.subtitle_1_content_1" : "-  ‘Squid Game Card’ is an NFT token for infrastructure entities of Metaverse using blockchain.",
+    "faq.subtitle_1_content_2_1" : "-  ‘Squid Game Card’ has 3",
+    "faq.subtitle_1_content_2_2" : " Hangul consonant",
+    "faq.subtitle_1_content_2_2_link" : "https://en.wikipedia.org/wiki/Consonant",
+    "faq.subtitle_1_content_2_3" : "  properties and 8 numeric properties." ,
+    "faq.subtitle_1_content_3" : "-   By issuing or purchasing this card, you agree to participate in the squid game metaverse.",
+    "faq.subtitle_1_content_4" : "-   During the Genesis Phase, ‘Squid Game Card’ can be issued and owned by anyone with only a gas fee.",
 
-    "faq.subtitle_2" : "‘오징어게임 카드’의 특별한 점은 무엇인가요?",
-    "faq.subtitle_2_content_1" : ""
+    "faq.subtitle_2" : "What is special about the ‘Squid Game Card’?",
+    "faq.subtitle_2_content_1" : "- ‘Squid Game Card’ was created by modifying the basic design idea and smart contract code of Loot Project’s Loot NFT. Just as Loot NFT is the building block of Loot Metaverse, it is a building block of ‘Squid Game Metaverse’.",
+    "faq.subtitle_2_content_2" : "- 'Squid Game Card' is issued in a completely decentralized way, and in a completely different way from the centralized metaverse, objects are used as adjuncts to games or stories that determine the 'meaning of cards' in order to construct a decentralized metaverse. It is designed to have enough properties on an independent object without defining it.",
+    "faq.subtitle_2_content_3" : "- 'Squid Game' was born from the Loot Project, but it solved some problems with Loot tokens (eg, excessive gas cost).",
+    
+    "faq.subtitle_3" : "Can I create a game or community with the ‘Squid Game Card’?",
+    "faq.subtitle_3_content_1" : "-  Of course! For users who have 'Squid Game Card', you can create your own game or community application by independently assigning qualitative characteristics to the attributes assigned to 'Hangul consonants' and 'numbers' of the 'Squid Game Card'.",
+
+    "faq.subtitle_4" : "How can I get the ‘Squid Game Card’?",
+    "faq.subtitle_4_content_1" : "-  The way you can get the ‘Squid Game Card’ is to participate in the Minting Round during the Genesis Phase and pay the gas fee and issue it yourself on the web3 page of the Squid Game Card Smart Contract.",
+    "faq.subtitle_4_content_2" : "  Users who are willing to sell the ‘Squid Game Card’ can obtain it by purchasing a card registered in a marketplace such as OpenSea.",
+
+    "faq.subtitle_5" : "If only 10,000 are issued, isn't it difficult for most people to have a squid game card?",
+    "faq.subtitle_5_content_1" : "-  The squid game card can issue expansion cards with its own smart contract according to each individual's needs while creating a game or community.",
+
+    "faq.subtitle_6" : "Isn't the 11 attributes given to the squid game card not enough?",
+    "faq.subtitle_6_content_1" : "- Anyone who wants to create their own game or community can introduce properties other than those granted to cards with a ‘virtual card’ contract.",
+
+    "faq.subtitle_7" : "How is the value of the Squid Game Card determined?",
+    "faq.subtitle_7_content_1" : "- The value of the squid game card is not inherent in itself, but is given by the game or community created using this card.",
+    "faq.subtitle_7_content_2" : "- However, since some attributes given to squid game cards are issued with their ‘rarity’ adjusted during the issuance stage, the frequency of attribute expression can be a factor that fundamentally affects value formation.",
+
+    "faq.subtitle_8_content_1" : "The smart contract of this project is open sourced in the ‘Github’ repository.",
+    "faq.subtitle_8_content_2" : "The code of this project consists of code that has not been ‘audited’ by a third party, ",
+    "faq.subtitle_8_content_3" : "third party, and the executor is responsible for its execution."
 }

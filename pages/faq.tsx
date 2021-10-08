@@ -60,13 +60,23 @@ function FAQ(): ReactElement {
                     <h3>{t('faq.subtitle_7')}</h3>
                     <p>{t('faq.subtitle_7_content_1')}</p>
                     <p>{t('faq.subtitle_7_content_2')}</p>
+                    <br/>
+                    <br/>
+                    <br/>
                 </div>
-
+                
                 <div className={styles.faq__item}>
                     <p>{t('faq.subtitle_8_content_1')}</p>
                     <p>{t('faq.subtitle_8_content_2')}</p>
                     <p>{t('faq.subtitle_8_content_3')}</p>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
                 </div>
+                
             </div>
         </Layout>
     );

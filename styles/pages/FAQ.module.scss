@@ -3,13 +3,18 @@
   max-width: 800px;
   margin: 0px auto;
   padding: 15px 20px;
+  h2{
+    color: #ffffff;
+  }
 }
 
 // FAQ Item
 .faq__item {
+  
   h3 {
+    
     font-size: 22px;
-    border-bottom: 1px solid rgb(55, 0, 255); //FAQ 밑줄
+    border-bottom: 1px solid rgb(255, 255, 255); //FAQ 밑줄
     margin: 20px 0px 0px 0px;
     display: inline-block;
   }
@@ -20,7 +25,7 @@
     margin: 20px 0px;
 
     a {
-      color: #2d1ccc; //FAQ 전체 내용에 링크글
+      color: #13096b; //FAQ 전체 내용에 링크글
 
       &:hover {
         text-decoration: underline;
